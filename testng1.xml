@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<test thread-count="5" name="Test1">
+	    <classes>
+	      <class name="testPackage.MavenTest1"/>
+	    </classes>
+	</test> <!-- Test1 -->
+
+	<test thread-count="5" name="Test2">
+		<!-- <groups>
+			<run>
+				<include name="OtherTest"></include>
+			</run>
+		</groups>-->
+		<classes>
+		  <class name="testPackage.MavenTest2"/>
+		</classes>
+	</test> <!-- Test2 -->
+
+	<test thread-count="5" name="Test3">
+	    <classes>
+	      <class name="testPackage.PriorityTest"/>
+	    </classes>
+	</test> <!-- Test3 -->
+
+	<test thread-count="5" name="Test4">
+		<parameter name="a" value="5"></parameter>
+		<parameter name="b" value="2"></parameter>
+	    <classes>
+	      <class name="testPackage.Sum"/>
+		  <class name="testPackage.Subtract"/>
+	    </classes>
+	</test> <!-- Test4 -->
+</suite> <!-- Suite -->
